@@ -11,7 +11,9 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd"
 	default-autowire="byName">
 
+	<context:annotation-config />
 	<context:component-scan base-package="ls.demon" />
+
 	<mvc:annotation-driven />
 
 	<bean id="velocityConfig"

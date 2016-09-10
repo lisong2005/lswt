@@ -20,17 +20,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class BaseController {
 
     private final static org.slf4j.Logger logger     = LoggerFactory
-                                                         .getLogger(BaseController.class);
+        .getLogger(BaseController.class);
 
     private static int                    counter    = 0;
     private static final String           VIEW_INDEX = "index";
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String welcome(ModelMap model) {
-
+        logger.info("");
         model.addAttribute("message", "Welcome");
         model.addAttribute("counter", ++counter);
-        logger.debug("[welcome] counter : {}", counter);
+        logger.info("[welcome] counter : {}", counter);
 
         // Spring uses InternalResourceViewResolver and return back index.jsp
         return VIEW_INDEX;
@@ -39,10 +39,11 @@ public class BaseController {
 
     @RequestMapping(value = "/{name}/list.htm", method = RequestMethod.GET)
     public String welcomeName(@PathVariable String name, ModelMap model) {
+        logger.info("");
 
         model.addAttribute("message", "Welcome " + name);
         model.addAttribute("counter", ++counter);
-        logger.debug("[welcomeName] counter : {}", counter);
+        logger.info("[welcomeName] counter : {}", counter);
         return VIEW_INDEX;
 
     }
