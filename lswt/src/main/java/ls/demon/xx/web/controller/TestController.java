@@ -20,9 +20,9 @@ import ls.demon.xx.web.controller.form.XXForm;
 
 /**
  * 
- * http://localhost:8080/lswt/test/show.htm
- * http://localhost:8080/lswt/test/showJson.json
- * http://localhost:8080/lswt/test/showJson.htm
+ * http://localhost:8080/lswt/test/show.htm         vm
+ * http://localhost:8080/lswt/test/showJson.json 
+ * http://localhost:8080/lswt/test/showJson.htm     vm
  * 
  * http://localhost:8080/lswt/test/json1.json not_ok
  * http://localhost:8080/lswt/test/json2.json
@@ -47,6 +47,13 @@ public class TestController {
         logger.info("appId={},appSecret={}", appId, appSecret);
         modelMap.addAttribute("name", "hello 你好");
         return "test.vm";
+    }
+
+    @RequestMapping(value = "/test/show2.htm")
+    public String doGet2(ModelMap modelMap, String appId, String appSecret) {
+        logger.info("appId={},appSecret={}", appId, appSecret);
+        modelMap.addAttribute("message", "hello 你好");
+        return "index";
     }
 
     @RequestMapping(value = "/test/showJson.htm")

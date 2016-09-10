@@ -21,18 +21,21 @@ import ls.demon.xx.web.controller.form.XXForm;
 
 /**
  * 
- * http://localhost:8080/lswt/t2/6.j
- * http://localhost:8080/lswt/t2/5.j
+ * http://localhost:8080/lswt/t2/6.j            pojo xml
+ * http://localhost:8080/lswt/t2/5.j            pojo json
  * 
- * http://localhost:8080/lswt/t2/4.j not ok
- * http://localhost:8080/lswt/t2/3.j
+ * http://localhost:8080/lswt/t2/4.j not ok     jsonOjbect
+ * http://localhost:8080/lswt/t2/3.j            jsonString
  * 
- * http://localhost:8080/lswt/t2/2.j
- * http://localhost:8080/lswt/t2/1.j
+ * http://localhost:8080/lswt/t2/2.j            modelMap
+ * http://localhost:8080/lswt/t2/1.j            modelMap
  * 
- * http://localhost:8080/lswt/tool/at.htm
+ * http://localhost:8080/lswt/tool/at.htm       jsp_view
  * 
- * http://localhost:8080/lswt/ls/index.jsp
+ * http://localhost:8080/lswt/ls/index.jsp      jsp_direct
+ * 
+ * http://localhost:8080/lswt/test/show.htm     velocity_view
+ * http://localhost:8080/lswt/test/show2.htm    jsp_view
  * 
  * @author lisong
  * @version $Id: T2Controller.java, v 0.1 2016年9月10日 上午10:58:03 lisong Exp $

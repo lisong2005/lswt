@@ -44,6 +44,7 @@
 			</map>
 		</property>
 
+
 		<property name="viewResolvers">
 			<list>
 				<bean
@@ -81,8 +82,6 @@
 					</property>
 				</bean>
 
-				<bean
-					class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
 			</list>
 		</property>
 		<property name="defaultViews">
