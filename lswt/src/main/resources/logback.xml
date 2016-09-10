@@ -352,6 +352,7 @@
 
 
 	<logger name="com.witon" level="${logging_level_default}" />
+	<logger name="ls.demon.VelocityToolbox20View" level="${logger.sql.level}" />
 
 
 	<logger name="com.qq" level="${logging_level_test}" />
@@ -361,6 +362,8 @@
 	<logger name="org.springframework.ui.velocity" level="${logging_level_test}" />
 	<logger name="org.springframework.web.servlet.view.velocity"
 		level="${logging_level_test}" />
+
+
 
 	<!-- 睿博默认日志输出 -->
 	<logger name="ls.demon" level="${logging_level_default}"

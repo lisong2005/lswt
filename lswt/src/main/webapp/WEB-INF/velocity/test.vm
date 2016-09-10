@@ -7,7 +7,7 @@
         <h1>Hello World!</h1>
         <p>This is the homepage!</p>
         <p>${name}</p>
-        <p>${foo}</p>
+        <p>#SLITERAL($!{foo})</p>
         <p>${dateUtil}</p>
     </body>
 </html>
