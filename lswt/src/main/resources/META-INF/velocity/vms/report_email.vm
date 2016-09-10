@@ -1,0 +1,5 @@
+尊敬的  $!{username}: 
+<p>
+	您的睿博健康$!{reportType}($!{startDate} - $!{endDate})已经生成完成，点击<a href="$!{link}">这里</a>查看。
+</p>
+<p>无法点击？请拷贝链接到浏览器打开：$!{link}</p>

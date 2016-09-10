@@ -1,0 +1,15 @@
+
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Home</title>
+    </head>
+	
+    <body>
+        <h1>The quick brown fox jumps over the lazy dog</h1>
+        <p>$!{appConfig.nickName}</p>
+        <p><img src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=$!{result.getTicket()}"/></p>
+</iframe>
+    </body>
+</html>

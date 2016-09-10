@@ -1,0 +1,9 @@
+#enable_html_escaping()
+
+尊敬的  $!{username}: 
+<p>
+    睿博健康吧账户激活: <a href="$!{link}">点击这里完成激活</a>
+</p>
+<p>无法点击？请拷贝链接到浏览器打开：$!{link}</p>
+
+$esc.html($!{link})

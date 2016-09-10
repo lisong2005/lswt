@@ -1,0 +1,6 @@
+{
+#foreach( $key in $map.keySet() )
+    "$key": "$map.get($key)",
+#end
+	"test": null
+}
