@@ -28,7 +28,7 @@
 		</property>
 	</bean>
 
-	<bean
+	<bean id="contentNegotiatingViewResolver"
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 
 		<property name="order" value="100" />
@@ -40,7 +40,6 @@
 			<map>
 				<entry key="atom" value="application/atom+xml" />
 				<entry key="htm" value="text/html" />
-				<entry key="html" value="text/html" />
 				<entry key="json" value="application/json" />
 				<entry key="xml" value="application/xml" />
 			</map>

@@ -19,19 +19,18 @@ public class JspView extends org.springframework.web.servlet.view.JstlView {
     /**
     * Logger for this class
     */
-    private static final Logger logger = LoggerFactory.getLogger(JspView.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger("ls.demon.VelocityToolbox20View");
 
     /** 
      * @see org.springframework.web.servlet.view.AbstractUrlBasedView#checkResource(java.util.Locale)
      */
     @Override
     public boolean checkResource(Locale locale) throws Exception {
-        logger.debug("{}", locale);
-        logger.debug("{}", this.getServletContext().getRealPath("/"));
-        logger.debug("{}", this.getUrl());
+        LOGGER.debug("{}, {}, {}", locale, this.getServletContext().getRealPath("/"), getUrl());
         File file = new File(this.getServletContext().getRealPath("/") + getUrl());
-        logger.debug("{}", file);
-        return file.exists();//判断该jsp页面是否存在  
+        LOGGER.debug("{}", file);
+        //判断该jsp页面是否存在  
+        return file.exists();
     }
 
 }

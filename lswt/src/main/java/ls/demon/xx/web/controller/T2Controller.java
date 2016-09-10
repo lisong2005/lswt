@@ -56,6 +56,7 @@ public class T2Controller {
         map.put("2", "中文");
 
         modelMap.addAttribute("map", map);
+
         return "json.vm";
     }
 
