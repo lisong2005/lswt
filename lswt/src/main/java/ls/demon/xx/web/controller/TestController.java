@@ -46,7 +46,7 @@ public class TestController {
     public String doGet(ModelMap modelMap, String appId, String appSecret) {
         logger.info("appId={},appSecret={}", appId, appSecret);
         modelMap.addAttribute("name", "hello 你好<input />");
-        modelMap.addAttribute("foo", "hello 你好<input />");
+        modelMap.addAttribute("foo", "hello world 你好<input />");
         return "test.vm";
     }
 

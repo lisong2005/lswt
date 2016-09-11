@@ -7,7 +7,10 @@
         <h1>Hello World!</h1>
         <p>This is the homepage!</p>
         <p>${name}</p>
-        <p>#SLITERAL($!{foo})</p>
-        <p>${dateUtil}</p>
+		#set($a = $stringEscape.escapeHtml(${name}))
+        <p>#SLITERAL(${a})</p>
+		
+        <p>#SLITERAL(${foo})</p>
+        <p>$stringEscape.escapeHtml(${foo})</p>
     </body>
 </html>
