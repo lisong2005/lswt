@@ -7,6 +7,9 @@ package ls.demon.xx.web.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -43,8 +46,11 @@ public class TestController {
     private static final Logger logger = LoggerFactory.getLogger(TestController.class);
 
     @RequestMapping(value = "/test/show.htm")
-    public String doGet(ModelMap modelMap, String appId, String appSecret) {
+    public String doGet(ModelMap modelMap, String appId, String appSecret, HttpServletRequest req) {
         logger.info("appId={},appSecret={}", appId, appSecret);
+        HttpSession session = req.getSession(true);
+        session.setAttribute("s_key", "s_value");
+
         modelMap.addAttribute("name", "hello 你好<input />");
         modelMap.addAttribute("foo", "hello world 你好<input />");
         return "test.vm";
